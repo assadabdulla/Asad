@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asad Abdullah - سەرتاشخانە</title>
+    <title>پڕۆفایلی کەسی - RamYar Kalakchi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -13,442 +13,217 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --gold: #f39c12;
-            --dark: #1a1a2e;
-            --light: #ecf0f1;
-        }
-        
         body {
-            background: linear-gradient(135deg, var(--dark), #2c3e50);
-            color: var(--light);
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            perspective: 1000px;
         }
         
         .container {
             width: 100%;
-            max-width: 1200px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-        
-        /* Card Styles with 3D Effect */
-        .card {
+            max-width: 400px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 30px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .card:hover {
-            transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
-        }
-        
-        /* Profile Header */
         .profile-header {
+            position: relative;
             text-align: center;
-            margin-bottom: 30px;
-            transform: translateZ(30px);
+            padding: 30px 20px 20px;
+            background: rgba(0, 0, 0, 0.3);
         }
         
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid rgba(243, 156, 18, 0.3);
-            margin: 0 auto 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            transform: translateZ(40px);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 15px;
+            display: block;
         }
         
         .profile-name {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, var(--gold), var(--accent));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            transform: translateZ(20px);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         
         .profile-title {
-            font-size: 1.2rem;
+            font-size: 16px;
             opacity: 0.9;
-            margin-bottom: 10px;
-            transform: translateZ(15px);
-        }
-        
-        .business-badge {
-            display: inline-block;
-            background: linear-gradient(to right, var(--gold), #e67e22);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
-            transform: translateZ(10px);
-        }
-        
-        /* Section Styles */
-        .section {
-            margin-bottom: 25px;
-            transform: translateZ(10px);
-        }
-        
-        .section-title {
-            font-size: 1.5rem;
             margin-bottom: 15px;
-            color: var(--gold);
-            border-bottom: 2px solid rgba(243, 156, 18, 0.3);
-            padding-bottom: 5px;
-            display: inline-block;
         }
         
-        /* Social Media Styles */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
+        .profile-bio {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            padding: 0 10px;
         }
         
-        .social-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 15px;
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 20px 30px;
+        }
+        
+        .social-link {
             display: flex;
             align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
             transition: all 0.3s ease;
-            cursor: pointer;
-            transform-style: preserve-3d;
-            transform: translateZ(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .social-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateZ(20px) translateY(-5px);
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .social-icon {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: 50%;
             margin-left: 15px;
-            font-size: 1.3rem;
-            transform: translateZ(15px);
+            font-size: 20px;
         }
         
-        .snapchat { background: #FFFC00; color: black; }
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .tiktok { background: #000000; }
-        .whatsapp { background: #25d366; }
+        .snapchat .social-icon {
+            background: linear-gradient(45deg, #FFFC00, #FFFC00);
+            color: #000;
+        }
+        
+        .instagram .social-icon {
+            background: linear-gradient(45deg, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+        }
+        
+        .tiktok .social-icon {
+            background: linear-gradient(45deg, #000000, #25F4EE, #FE2C55);
+        }
+        
+        .whatsapp .social-icon {
+            background: linear-gradient(45deg, #25D366, #25D366);
+        }
+        
+        .social-info {
+            flex: 1;
+        }
         
         .social-name {
-            font-weight: 500;
-            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 3px;
         }
         
         .social-username {
-            font-size: 0.85rem;
+            font-size: 12px;
             opacity: 0.8;
         }
         
-        /* Call History */
-        .call-history {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 20px;
-            transform: translateZ(5px);
-        }
-        
-        .call-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .call-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(52, 152, 219, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 15px;
-            color: var(--secondary);
-        }
-        
-        .call-details {
-            flex-grow: 1;
-        }
-        
-        .call-type {
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-        
-        .call-time {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-        
-        .call-duration {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-        
-        /* Message Styles */
-        .message {
-            margin-top: 25px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            border-right: 4px solid var(--gold);
-            transform: translateZ(10px);
-        }
-        
-        .message p {
-            line-height: 1.6;
-            margin-bottom: 10px;
+        .footer {
             text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            font-size: 14px;
+            line-height: 1.6;
         }
         
         .highlight {
-            color: var(--gold);
-            font-weight: bold;
-        }
-        
-        /* About Section */
-        .about-text {
-            line-height: 1.7;
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-        
-        /* 3D Floating Animation */
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px) translateZ(0); }
-            50% { transform: translateY(-10px) translateZ(10px); }
-            100% { transform: translateY(0px) translateZ(0); }
-        }
-        
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .container {
-                flex-wrap: nowrap;
-            }
-            
-            .card {
-                max-width: 450px;
-            }
-            
-            .profile-name {
-                font-size: 2.5rem;
-            }
+            color: #FFD700;
+            font-weight: 600;
         }
         
         @media (max-width: 480px) {
-            .card {
-                padding: 20px;
+            .container {
+                max-width: 100%;
+            }
+            
+            .profile-img {
+                width: 100px;
+                height: 100px;
             }
             
             .profile-name {
-                font-size: 1.8rem;
-            }
-            
-            .social-grid {
-                grid-template-columns: 1fr;
+                font-size: 22px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="card floating">
-            <div class="profile-header">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Asad Abdullah" class="profile-img">
-                <h1 class="profile-name">Asad Abdullah</h1>
-                <p class="profile-title">خاوەنی سەرتاشخانە & کارگێڕی بەرووبومی کوالیتی</p>
-                <div class="business-badge">
-                    <i class="fas fa-crown"></i> خاوەنی کارە تایبەتەکە
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title">هەژمارە کۆمەڵایەتییەکان</h2>
-                <div class="social-grid">
-                    <div class="social-item">
-                        <div class="social-icon snapchat">
-                            <i class="fab fa-snapchat-ghost"></i>
-                        </div>
-                        <div class="social-details">
-                            <div class="social-name">سناپ چات</div>
-                            <div class="social-username">asadabdulla2552</div>
-                        </div>
-                    </div>
-                    <div class="social-item">
-                        <div class="social-icon instagram">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="social-details">
-                            <div class="social-name">ئینستاگرام</div>
-                            <div class="social-username">assadstayel</div>
-                        </div>
-                    </div>
-                    <div class="social-item">
-                        <div class="social-icon tiktok">
-                            <i class="fab fa-tiktok"></i>
-                        </div>
-                        <div class="social-details">
-                            <div class="social-name">تیک تۆک</div>
-                            <div class="social-username">assadstayl1</div>
-                        </div>
-                    </div>
-                    <div class="social-item">
-                        <div class="social-icon whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="social-details">
-                            <div class="social-name">وەتس ئەپ</div>
-                            <div class="social-username">07507363231</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="message">
-                <p>بۆ هەر کێشە، پێشنیاز یان داواکاریەک، تکایە پەیامم بۆ بنێرە. من لێرەم بۆ خزمەتکردنی تۆ، براکەم.</p>
-                <p class="highlight">دڵخۆشی تۆ لە پێشەنگى کارەکانمە، من هەمیشە ئامادەم بۆ یارمەتیدان لە بواری کارەکەمدا!</p>
-            </div>
+        <div class="profile-header">
+            <img src="profile.jpg" alt="پڕۆفایل" class="profile-img">
+            <h1 class="profile-name">RamYar Kalakchi</h1>
+            <p class="profile-title">پڕۆگرامسازی</p>
+            <p class="profile-bio">بۆ دروستکردنی هەر جۆرە ئەپلیکەیشن و سیستەمێک دەتوانیت پەیوەندیم پێوە بکەیت.</p>
         </div>
         
-        <div class="card">
-            <div class="section">
-                <h2 class="section-title">چالاکیەکان</h2>
-                <div class="call-history">
-                    <div class="call-item">
-                        <div class="call-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <div class="call-details">
-                            <div class="call-type">ئەمرۆ</div>
-                            <div class="call-time">6:01 PM</div>
-                        </div>
-                    </div>
-                    
-                    <div class="call-item">
-                        <div class="call-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="call-details">
-                            <div class="call-type">پەیوەندی دەنگی</div>
-                            <div class="call-time">8:17 PM • 59 چرکە</div>
-                        </div>
-                    </div>
-                    
-                    <div class="call-item">
-                        <div class="call-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="call-details">
-                            <div class="call-type">پەیوەندی دەنگی</div>
-                            <div class="call-time">9:09 PM • 22 چرکە</div>
-                        </div>
-                    </div>
-                    
-                    <div class="call-item">
-                        <div class="call-icon">
-                            <i class="fas fa-comment"></i>
-                        </div>
-                        <div class="call-details">
-                            <div class="call-type">نامە</div>
-                            <div class="call-time">9:49 PM</div>
-                        </div>
-                    </div>
+        <div class="social-links">
+            <a href="https://www.snapchat.com/add/asadabdulla2552" class="social-link snapchat" target="_blank">
+                <div class="social-icon">
+                    <i class="fab fa-snapchat-ghost"></i>
                 </div>
-            </div>
+                <div class="social-info">
+                    <div class="social-name">سناپ چات</div>
+                    <div class="social-username">asadabdulla2552</div>
+                </div>
+            </a>
             
-            <div class="section">
-                <h2 class="section-title">دەربارەی من</h2>
-                <p class="about-text">
-                    من "ئەسعد عەبدوڵڵا" خاوەنی سەرتاشخانەیەکی سەرکەوتووم. کارم پێشکەشکردنی کوالیتی و خزمەتگوزاری بەرزی بە کڕیارەکانمە. 
-                    هەوڵ دەدەم هەمیشە باشترینم پێشکەش بکەم و دڵخۆشی هەموو کەسێک کە لەگەڵمدا کار دەکات یان خزمەتگوزاری وەردەگرێت.
-                </p>
-                
-                <p class="about-text">
-                    سەرتاشخانەکەم تایبەتە بە دروستکردنی بەرھەمە کوالیتی و جیاوازەکان. پێشکەشکردنی خزمەتگوزاری باش و متمانەپێکراو 
-                    یەکێکە لە بنەما سەرەکییەکانی کارم. هەمیشە هەوڵ دەدەم پێشکەشکردنی کوالیتی و جیاوازی لە کارەکانمدا.
-                </p>
-            </div>
+            <a href="https://www.instagram.com/assadstayel" class="social-link instagram" target="_blank">
+                <div class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="social-info">
+                    <div class="social-name">ئینستاگرام</div>
+                    <div class="social-username">assadstayel</div>
+                </div>
+            </a>
             
-            <div class="message">
-                <p>بۆ هەر خزمەتگوزاریەک یان پرسیارێک، بە ئاسانی لە ڕێگەی هەر یەک لە هەژمارە کۆمەڵایەتییەکانمەوە پەیوەندیم پێوە بکە.</p>
-            </div>
+            <a href="https://www.tiktok.com/@assadstayl1" class="social-link tiktok" target="_blank">
+                <div class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="social-info">
+                    <div class="social-name">تیک تۆک</div>
+                    <div class="social-username">assadstayl1</div>
+                </div>
+            </a>
+            
+            <a href="https://wa.me/9647507363231" class="social-link whatsapp" target="_blank">
+                <div class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="social-info">
+                    <div class="social-name">واتس ئەپ</div>
+                    <div class="social-username">+9647507363231</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>بۆ هەر کێشە، پێشنیار یان داواکاریەک، تکایە پەیامم بنێرە.</p>
+            <p>من لێرەم بۆ خزمەتکردنی تۆ، <span class="highlight">برایەکەم</span>.</p>
+            <p>دڵخوازی تۆ لە پێشەنگدایە، و هەر کات ئامادەم بۆ یارمەتیدان بە هەر پێویستیەکی پڕۆگرامسازی!</p>
         </div>
     </div>
-
-    <script>
-        // 3D tilt effect for cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.card');
-            
-            cards.forEach(card => {
-                card.addEventListener('mousemove', function(e) {
-                    const cardRect = this.getBoundingClientRect();
-                    const x = e.clientX - cardRect.left;
-                    const y = e.clientY - cardRect.top;
-                    
-                    const centerX = cardRect.width / 2;
-                    const centerY = cardRect.height / 2;
-                    
-                    const angleY = (x - centerX) / 25;
-                    const angleX = (centerY - y) / 25;
-                    
-                    this.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-10px)`;
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-                });
-            });
-            
-            // Social media item clicks
-            const socialItems = document.querySelectorAll('.social-item');
-            socialItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const platform = this.querySelector('.social-name').textContent;
-                    alert(`چوونە ناو هەژماری ${platform}ی Asad Abdullah`);
-                });
-            });
-        });
-    </script>
 </body>
 </html>
