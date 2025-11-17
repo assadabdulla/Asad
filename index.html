@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ku" dir="rtl">
+<html lang="ku" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پڕۆفایلی کەسی - RamYar Kalakchi</title>
+    <title>Asad Abdullah - Hair Stylist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,7 +14,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background: linear-gradient(135deg, #0a0f2d, #1a2a6c, #162b5c);
             color: #fff;
             min-height: 100vh;
             display: flex;
@@ -25,103 +25,166 @@
         
         .container {
             width: 100%;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
+            max-width: 420px;
+            background: rgba(15, 25, 60, 0.7);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255,255,255,0.4), 
+                transparent);
         }
         
         .profile-header {
             position: relative;
             text-align: center;
-            padding: 30px 20px 20px;
-            background: rgba(0, 0, 0, 0.3);
+            padding: 40px 20px 25px;
+            background: rgba(10, 20, 50, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .profile-img-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a2a6c, #0a0f2d);
+            padding: 6px;
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.4),
+                inset 0 0 20px rgba(26, 42, 108, 0.5);
         }
         
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 15px;
-            display: block;
+            border: 3px solid rgba(255, 255, 255, 0.15);
         }
         
         .profile-name {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            margin-bottom: 5px;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 8px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(to right, #a8c0ff, #3f4c6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
         }
         
         .profile-title {
             font-size: 16px;
             opacity: 0.9;
             margin-bottom: 15px;
+            color: #a8c0ff;
+            font-weight: 500;
         }
         
         .profile-bio {
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
             margin-bottom: 20px;
-            padding: 0 10px;
+            padding: 0 15px;
+            color: #d1d9ff;
         }
         
         .social-links {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            padding: 0 20px 30px;
+            gap: 15px;
+            padding: 0 25px 35px;
         }
         
         .social-link {
             display: flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 12px 20px;
-            border-radius: 50px;
+            background: rgba(20, 30, 70, 0.6);
+            padding: 15px 20px;
+            border-radius: 15px;
             text-decoration: none;
             color: white;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(100, 130, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(100, 150, 255, 0.2), 
+                transparent);
+            transition: left 0.5s;
+        }
+        
+        .social-link:hover::before {
+            left: 100%;
         }
         
         .social-link:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(30, 50, 100, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(100, 150, 255, 0.4);
         }
         
         .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            margin-left: 15px;
+            margin-right: 18px;
             font-size: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .social-link:hover .social-icon {
+            transform: scale(1.1);
         }
         
         .snapchat .social-icon {
-            background: linear-gradient(45deg, #FFFC00, #FFFC00);
+            background: linear-gradient(135deg, #FFFC00, #FFD700);
             color: #000;
         }
         
         .instagram .social-icon {
-            background: linear-gradient(45deg, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+            background: linear-gradient(135deg, #833AB4, #C13584, #E1306C);
         }
         
         .tiktok .social-icon {
-            background: linear-gradient(45deg, #000000, #25F4EE, #FE2C55);
+            background: linear-gradient(135deg, #000000, #25F4EE, #FE2C55);
         }
         
         .whatsapp .social-icon {
-            background: linear-gradient(45deg, #25D366, #25D366);
+            background: linear-gradient(135deg, #25D366, #128C7E);
         }
         
         .social-info {
@@ -129,27 +192,38 @@
         }
         
         .social-name {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 600;
-            margin-bottom: 3px;
-        }
-        
-        .social-username {
-            font-size: 12px;
-            opacity: 0.8;
+            margin-bottom: 5px;
         }
         
         .footer {
             text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            background: rgba(10, 20, 50, 0.6);
             font-size: 14px;
             line-height: 1.6;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+            color: #d1d9ff;
         }
         
         .highlight {
-            color: #FFD700;
+            color: #a8c0ff;
             font-weight: 600;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a2a6c, #3f4c6b);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+            border: 1px solid rgba(100, 130, 255, 0.3);
         }
         
         @media (max-width: 480px) {
@@ -157,13 +231,13 @@
                 max-width: 100%;
             }
             
-            .profile-img {
-                width: 100px;
-                height: 100px;
+            .profile-img-container {
+                width: 140px;
+                height: 140px;
             }
             
             .profile-name {
-                font-size: 22px;
+                font-size: 24px;
             }
         }
     </style>
@@ -171,10 +245,12 @@
 <body>
     <div class="container">
         <div class="profile-header">
-            <img src="profile.jpg" alt="پڕۆفایل" class="profile-img">
-            <h1 class="profile-name">RamYar Kalakchi</h1>
-            <p class="profile-title">پڕۆگرامسازی</p>
-            <p class="profile-bio">بۆ دروستکردنی هەر جۆرە ئەپلیکەیشن و سیستەمێک دەتوانیت پەیوەندیم پێوە بکەیت.</p>
+            <div class="profile-img-container">
+                <img src="profile.jpg" alt="Profile" class="profile-img">
+            </div>
+            <h1 class="profile-name">Asad Abdullah</h1>
+            <p class="profile-title">Professional Hair Stylist</p>
+            <p class="profile-bio">Specializing in modern haircuts, styling, and professional hair care for men. Creating the perfect look for every occasion.</p>
         </div>
         
         <div class="social-links">
@@ -183,8 +259,7 @@
                     <i class="fab fa-snapchat-ghost"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">سناپ چات</div>
-                    <div class="social-username">asadabdulla2552</div>
+                    <div class="social-name">Snapchat</div>
                 </div>
             </a>
             
@@ -193,8 +268,7 @@
                     <i class="fab fa-instagram"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">ئینستاگرام</div>
-                    <div class="social-username">assadstayel</div>
+                    <div class="social-name">Instagram</div>
                 </div>
             </a>
             
@@ -203,8 +277,7 @@
                     <i class="fab fa-tiktok"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">تیک تۆک</div>
-                    <div class="social-username">assadstayl1</div>
+                    <div class="social-name">TikTok</div>
                 </div>
             </a>
             
@@ -213,16 +286,16 @@
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">واتس ئەپ</div>
-                    <div class="social-username">+9647507363231</div>
+                    <div class="social-name">WhatsApp</div>
                 </div>
             </a>
         </div>
         
         <div class="footer">
-            <p>بۆ هەر کێشە، پێشنیار یان داواکاریەک، تکایە پەیامم بنێرە.</p>
-            <p>من لێرەم بۆ خزمەتکردنی تۆ، <span class="highlight">برایەکەم</span>.</p>
-            <p>دڵخوازی تۆ لە پێشەنگدایە، و هەر کات ئامادەم بۆ یارمەتیدان بە هەر پێویستیەکی پڕۆگرامسازی!</p>
+            <p>For appointments, consultations, or any inquiries about our hair services.</p>
+            <p>I'm here to provide you with professional hair care, <span class="highlight">my friend</span>.</p>
+            <p>Your satisfaction is my priority, and I'm always ready to help with all your hairstyling needs!</p>
+            <div class="badge">Professional Hair Stylist</div>
         </div>
     </div>
 </body>
