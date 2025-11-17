@@ -1,106 +1,355 @@
-<!doctype html>
-<html lang="ckb">
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ramyar — Links</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Ramyar Kalakchi - personal link page" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad Abdullah - پڕۆفایل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a5276, #7d3c98);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .back-btn {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 15px;
+        }
+        
+        .header-info {
+            flex-grow: 1;
+        }
+        
+        .header h1 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            padding: 25px 20px;
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e0e0e0;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-name {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .profile-bio {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        
+        .business-badge {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Call History */
+        .call-history {
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 1.1rem;
+            color: #128c7e;
+            margin: 20px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .call-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .call-icon {
+            width: 40px;
+            height: 40px;
+            background: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            color: #128c7e;
+        }
+        
+        .call-details {
+            flex-grow: 1;
+        }
+        
+        .call-type {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .call-time {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .call-duration {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        /* Social Accounts */
+        .social-accounts {
+            padding: 20px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        
+        .social-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .snapchat { background: #FFFC00; color: black; }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .tiktok { background: #000000; }
+        .whatsapp { background: #25d366; }
+        
+        .social-details {
+            flex-grow: 1;
+        }
+        
+        .social-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .social-username {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                border-radius: 0;
+                max-width: 100%;
+            }
+            
+            body {
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="page">
-    <header class="profile-card">
-      <div class="profile-top">
-        <div class="avatar-ring">
-          <img id="profileImg" src="profile.jpg" alt="Ramyar Kalakchi" />
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="back-btn">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="header-info">
+                <h1>پڕۆفایل</h1>
+                <p>Asad Abdullah</p>
+            </div>
         </div>
-        <h1 class="name">Ramyar Kalakchi</h1>
-        <p class="bio">بۆ هەردەستکاری پروگرامینگ تا توانم یارمەتیدە بێنم</p>
-
-        <nav class="social-row" aria-label="social links">
-          <!-- Snapchat -->
-          <a class="s-btn" href="https://www.snapchat.com/add/dr.ramo2001" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden><path d="M12 2c..."/></svg>
-            <span class="sr-only">Snapchat</span>
-          </a>
-
-          <!-- Facebook -->
-          <a class="s-btn" href="https://www.facebook.com/98ramagyan" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden><path d="M22 12..."/></svg>
-            <span class="sr-only">Facebook</span>
-          </a>
-
-          <!-- TikTok -->
-          <a class="s-btn" href="https://www.tiktok.com/@ramayar98" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden><path d="M12 2..."/></svg>
-            <span class="sr-only">TikTok</span>
-          </a>
-
-          <!-- WhatsApp -->
-          <a class="s-btn" href="https://wa.me/9647510322374" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden><path d="M20 3..."/></svg>
-            <span class="sr-only">WhatsApp</span>
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <section class="links-area">
-      <!-- Link item template -->
-      <a class="link-card" href="https://www.snapchat.com/add/dr.ramo2001" target="_blank" rel="noopener">
-        <div class="lc-left">
-          <!-- small avatar or icon -->
-          <div class="lc-icon">S</div>
+        
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <img src="https://i.pravatar.cc/150?img=32" alt="Profile" class="profile-img">
+            <h2 class="profile-name">Asad Abdullah</h2>
+            <p class="profile-bio">خاوەنی سەرتاشخانە &nbsp; • &nbsp; کاری تایبەتی</p>
+            <div class="business-badge">
+                <i class="fas fa-briefcase"></i> پیشەگەر
+            </div>
         </div>
-        <div class="lc-main">
-          <div class="lc-title">Snapchat</div>
-          <div class="lc-sub">dr.ramo2001</div>
+        
+        <!-- Call History -->
+        <div class="call-history">
+            <h3 class="section-title">مێژووی پەیوەندییەکان</h3>
+            
+            <div class="call-item">
+                <div class="call-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="call-details">
+                    <div class="call-type">پەیوەندی دەنگی</div>
+                    <div class="call-time">٨:١٧ PM • ئەمڕۆ</div>
+                </div>
+                <div class="call-duration">٥٩ چرکە</div>
+            </div>
+            
+            <div class="call-item">
+                <div class="call-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="call-details">
+                    <div class="call-type">پەیوەندی دەنگی</div>
+                    <div class="call-time">٩:٠٩ PM • ئەمڕۆ</div>
+                </div>
+                <div class="call-duration">٢٢ چرکە</div>
+            </div>
+            
+            <div class="call-item">
+                <div class="call-icon">
+                    <i class="fas fa-comment"></i>
+                </div>
+                <div class="call-details">
+                    <div class="call-type">نامە</div>
+                    <div class="call-time">٩:٤٩ PM • ئەمڕۆ</div>
+                </div>
+            </div>
         </div>
-        <div class="lc-arrow">⟶</div>
-      </a>
+        
+        <!-- Social Accounts -->
+        <div class="social-accounts">
+            <h3 class="section-title">هەژمارە کۆمەڵایەتییەکان</h3>
+            
+            <div class="social-item">
+                <div class="social-icon snapchat">
+                    <i class="fab fa-snapchat-ghost"></i>
+                </div>
+                <div class="social-details">
+                    <div class="social-name">سناپ چات</div>
+                    <div class="social-username">asadabdulla2552</div>
+                </div>
+            </div>
+            
+            <div class="social-item">
+                <div class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="social-details">
+                    <div class="social-name">ئینستاگرام</div>
+                    <div class="social-username">assadstayel</div>
+                </div>
+            </div>
+            
+            <div class="social-item">
+                <div class="social-icon tiktok">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="social-details">
+                    <div class="social-name">تیک تۆک</div>
+                    <div class="social-username">assadstayl1</div>
+                </div>
+            </div>
+            
+            <div class="social-item">
+                <div class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="social-details">
+                    <div class="social-name">وەتس ئەپ</div>
+                    <div class="social-username">07507363231</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>پێشکەش بۆ Asad Abdullah &copy; 2023</p>
+        </div>
+    </div>
 
-      <a class="link-card" href="https://www.tiktok.com/@ramayar98" target="_blank" rel="noopener">
-        <div class="lc-left">
-          <div class="lc-icon">🎵</div>
-        </div>
-        <div class="lc-main">
-          <div class="lc-title">TikTok</div>
-          <div class="lc-sub">@ramayar98</div>
-        </div>
-        <div class="lc-arrow">⟶</div>
-      </a>
-
-      <a class="link-card" href="https://www.facebook.com/98ramagyan" target="_blank" rel="noopener">
-        <div class="lc-left">
-          <div class="lc-icon">f</div>
-        </div>
-        <div class="lc-main">
-          <div class="lc-title">Facebook</div>
-          <div class="lc-sub">98ramagyan</div>
-        </div>
-        <div class="lc-arrow">⟶</div>
-      </a>
-
-      <a class="link-card" href="https://wa.me/9647510322374" target="_blank" rel="noopener">
-        <div class="lc-left">
-          <div class="lc-icon">✆</div>
-        </div>
-        <div class="lc-main">
-          <div class="lc-title">WhatsApp</div>
-          <div class="lc-sub">+964 751 032 2374</div>
-        </div>
-        <div class="lc-arrow">⟶</div>
-      </a>
-    </section>
-
-    <footer class="footer-note">
-      <small>© Ramyar — link page</small>
-    </footer>
-  </main>
-
-  <!-- Inline: small accessibility helper -->
-  <style>
-    .sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-  </style>
+    <script>
+        // Adding some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const callItems = document.querySelectorAll('.call-item');
+            const socialItems = document.querySelectorAll('.social-item');
+            
+            callItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    alert('پەیوەندی دروستکرا بۆ ' + this.querySelector('.call-type').textContent);
+                });
+            });
+            
+            socialItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const platform = this.querySelector('.social-name').textContent;
+                    alert('چوونە ناو هەژماری " + platform + "');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
