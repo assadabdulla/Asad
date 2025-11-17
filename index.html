@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asad Abdullah - Hair Stylist</title>
+    <title>ئەسعد عەبدوڵڵا - سەرتاشخانەی پیشەگەر</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,27 +14,41 @@
         }
         
         body {
-            background: linear-gradient(135deg, #0a0f2d, #1a2a6c, #162b5c);
+            background: linear-gradient(135deg, #0a0f2d, #1a2a6c, #162b5c, #4a1c6b);
             color: #fff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            animation: backgroundShift 10s ease infinite;
+        }
+        
+        @keyframes backgroundShift {
+            0% { background: linear-gradient(135deg, #0a0f2d, #1a2a6c, #162b5c, #4a1c6b); }
+            50% { background: linear-gradient(135deg, #1a2a6c, #4a1c6b, #0a0f2d, #162b5c); }
+            100% { background: linear-gradient(135deg, #0a0f2d, #1a2a6c, #162b5c, #4a1c6b); }
         }
         
         .container {
             width: 100%;
-            max-width: 420px;
-            background: rgba(15, 25, 60, 0.7);
-            backdrop-filter: blur(15px);
+            max-width: 450px;
+            background: rgba(15, 25, 60, 0.85);
+            backdrop-filter: blur(20px);
             border-radius: 25px;
             overflow: hidden;
             box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+                0 20px 40px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
         
         .container::before {
@@ -46,29 +60,37 @@
             height: 1px;
             background: linear-gradient(90deg, 
                 transparent, 
-                rgba(255,255,255,0.4), 
+                rgba(255,255,255,0.6), 
                 transparent);
         }
         
         .profile-header {
             position: relative;
             text-align: center;
-            padding: 40px 20px 25px;
-            background: rgba(10, 20, 50, 0.6);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 45px 25px 30px;
+            background: rgba(10, 20, 50, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            background: linear-gradient(180deg, rgba(15, 30, 70, 0.9) 0%, rgba(10, 20, 50, 0.7) 100%);
         }
         
         .profile-img-container {
             position: relative;
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 20px;
+            width: 170px;
+            height: 170px;
+            margin: 0 auto 25px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #1a2a6c, #0a0f2d);
-            padding: 6px;
+            background: linear-gradient(135deg, #ff6b6b, #4a1c6b, #1a2a6c, #00b4db);
+            padding: 8px;
             box-shadow: 
-                0 10px 25px rgba(0, 0, 0, 0.4),
-                inset 0 0 20px rgba(26, 42, 108, 0.5);
+                0 15px 30px rgba(0, 0, 0, 0.5),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.1); }
+            50% { box-shadow: 0 15px 40px rgba(74, 28, 107, 0.6), inset 0 0 40px rgba(255, 255, 255, 0.2); }
+            100% { box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(255, 255, 255, 0.1); }
         }
         
         .profile-img {
@@ -76,54 +98,55 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.15);
+            border: 3px solid rgba(255, 255, 255, 0.2);
         }
         
         .profile-name {
-            font-size: 26px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: 800;
             margin-bottom: 8px;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(to right, #a8c0ff, #3f4c6b);
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #ff6b6b, #a8c0ff, #00b4db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: 0.5px;
         }
         
         .profile-title {
-            font-size: 16px;
+            font-size: 18px;
             opacity: 0.9;
             margin-bottom: 15px;
             color: #a8c0ff;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .profile-bio {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 15px;
+            line-height: 1.7;
             margin-bottom: 20px;
             padding: 0 15px;
             color: #d1d9ff;
+            text-align: center;
         }
         
         .social-links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            padding: 0 25px 35px;
+            gap: 18px;
+            padding: 0 30px 40px;
         }
         
         .social-link {
             display: flex;
             align-items: center;
-            background: rgba(20, 30, 70, 0.6);
-            padding: 15px 20px;
-            border-radius: 15px;
+            background: rgba(20, 30, 70, 0.7);
+            padding: 18px 25px;
+            border-radius: 18px;
             text-decoration: none;
             color: white;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(100, 130, 255, 0.2);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(100, 130, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -137,9 +160,9 @@
             height: 100%;
             background: linear-gradient(90deg, 
                 transparent, 
-                rgba(100, 150, 255, 0.2), 
+                rgba(255, 255, 255, 0.2), 
                 transparent);
-            transition: left 0.5s;
+            transition: left 0.7s;
         }
         
         .social-link:hover::before {
@@ -147,44 +170,44 @@
         }
         
         .social-link:hover {
-            background: rgba(30, 50, 100, 0.7);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            border-color: rgba(100, 150, 255, 0.4);
+            background: rgba(40, 60, 120, 0.8);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+            border-color: rgba(150, 180, 255, 0.5);
         }
         
         .social-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            margin-right: 18px;
-            font-size: 20px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
+            margin-right: 20px;
+            font-size: 22px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
         }
         
         .social-link:hover .social-icon {
-            transform: scale(1.1);
+            transform: scale(1.15) rotate(5deg);
         }
         
         .snapchat .social-icon {
-            background: linear-gradient(135deg, #FFFC00, #FFD700);
+            background: linear-gradient(135deg, #FFFC00, #FFD700, #FFA500);
             color: #000;
         }
         
         .instagram .social-icon {
-            background: linear-gradient(135deg, #833AB4, #C13584, #E1306C);
+            background: linear-gradient(135deg, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040);
         }
         
         .tiktok .social-icon {
-            background: linear-gradient(135deg, #000000, #25F4EE, #FE2C55);
+            background: linear-gradient(135deg, #000000, #25F4EE, #FE2C55, #000000);
         }
         
         .whatsapp .social-icon {
-            background: linear-gradient(135deg, #25D366, #128C7E);
+            background: linear-gradient(135deg, #25D366, #128C7E, #075E54);
         }
         
         .social-info {
@@ -192,38 +215,64 @@
         }
         
         .social-name {
-            font-size: 17px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
             margin-bottom: 5px;
         }
         
         .footer {
             text-align: center;
-            padding: 25px;
-            background: rgba(10, 20, 50, 0.6);
-            font-size: 14px;
-            line-height: 1.6;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 25px;
+            background: rgba(10, 20, 50, 0.7);
+            font-size: 15px;
+            line-height: 1.7;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            background: linear-gradient(180deg, rgba(10, 20, 50, 0.7) 0%, rgba(15, 30, 70, 0.9) 100%);
         }
         
         .footer p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #d1d9ff;
         }
         
         .highlight {
-            color: #a8c0ff;
-            font-weight: 600;
+            color: #ff6b6b;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
         
         .badge {
             display: inline-block;
-            background: linear-gradient(135deg, #1a2a6c, #3f4c6b);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 10px;
-            border: 1px solid rgba(100, 130, 255, 0.3);
+            background: linear-gradient(135deg, #ff6b6b, #4a1c6b, #1a2a6c);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .decoration {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,107,107,0.2) 0%, rgba(26,42,108,0) 70%);
+            top: -80px;
+            right: -80px;
+            z-index: -1;
+        }
+        
+        .decoration-2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168,192,255,0.2) 0%, rgba(26,42,108,0) 70%);
+            bottom: -60px;
+            left: -60px;
+            z-index: -1;
         }
         
         @media (max-width: 480px) {
@@ -232,25 +281,32 @@
             }
             
             .profile-img-container {
-                width: 140px;
-                height: 140px;
+                width: 150px;
+                height: 150px;
             }
             
             .profile-name {
                 font-size: 24px;
             }
+            
+            .social-links {
+                padding: 0 20px 30px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="decoration"></div>
+    <div class="decoration-2"></div>
+    
     <div class="container">
         <div class="profile-header">
             <div class="profile-img-container">
-                <img src="profile.jpg" alt="Profile" class="profile-img">
+                <img src="profile.jpg" alt="پڕۆفایل" class="profile-img">
             </div>
-            <h1 class="profile-name">Asad Abdullah</h1>
-            <p class="profile-title">Professional Hair Stylist</p>
-            <p class="profile-bio">Specializing in modern haircuts, styling, and professional hair care for men. Creating the perfect look for every occasion.</p>
+            <h1 class="profile-name">ئەسعد عەبدوڵڵا</h1>
+            <p class="profile-title">سەرتاشخانەی پیشەگەر</p>
+            <p class="profile-bio">تایبەتمەند بە قژی مۆدێرن، شێوازدان، و چاودێری قژی پیشەگەر بۆ پیاوان. دروستکردنی جوانترین شێواز بۆ هەموو بۆنەیەک.</p>
         </div>
         
         <div class="social-links">
@@ -259,7 +315,7 @@
                     <i class="fab fa-snapchat-ghost"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">Snapchat</div>
+                    <div class="social-name">سناپ چات</div>
                 </div>
             </a>
             
@@ -268,7 +324,7 @@
                     <i class="fab fa-instagram"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">Instagram</div>
+                    <div class="social-name">ئینستاگرام</div>
                 </div>
             </a>
             
@@ -277,7 +333,7 @@
                     <i class="fab fa-tiktok"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">TikTok</div>
+                    <div class="social-name">تیک تۆک</div>
                 </div>
             </a>
             
@@ -286,16 +342,16 @@
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <div class="social-info">
-                    <div class="social-name">WhatsApp</div>
+                    <div class="social-name">واتس ئەپ</div>
                 </div>
             </a>
         </div>
         
         <div class="footer">
-            <p>For appointments, consultations, or any inquiries about our hair services.</p>
-            <p>I'm here to provide you with professional hair care, <span class="highlight">my friend</span>.</p>
-            <p>Your satisfaction is my priority, and I'm always ready to help with all your hairstyling needs!</p>
-            <div class="badge">Professional Hair Stylist</div>
+            <p>بۆ کاتی دیاریکراو، ڕاوێژکاری، یان هەر پرسیارێک دەربارەی خزمەتگوزاریە قژییەکانمان.</p>
+            <p>من لێرەم بۆ پێشکەشکردنی چاودێری قژی پیشەگەر، <span class="highlight">هاوڕێکەم</span>.</p>
+            <p>دڵخوازی تۆ لە پێشەنگدایە، و هەر کات ئامادەم بۆ یارمەتیدان بە هەموو پێویستیە شێوازدانەکانت!</p>
+            <div class="badge">سەرتاشخانەی پیشەگەر</div>
         </div>
     </div>
 </body>
